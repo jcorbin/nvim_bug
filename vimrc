@@ -20,15 +20,9 @@ function! s:Move(cmd, count, map) abort
   call s:ExecMove('move'.a:cmd.a:count)
 endfunction
 
-function! s:MoveSelectionUp(count) abort
-  call s:ExecMove("'<,'>move'<--".a:count)
-endfunction
-
 function! s:MoveSelectionDown(count) abort
   call s:ExecMove("'<,'>move'>+".a:count)
 endfunction
 
-nmap [e :<C-U>call <SID>Move('--',v:count1,'Up')<CR>
 nmap ]e :<C-U>call <SID>Move('+',v:count1,'Down')<CR>
-xmap [e :<C-U>call <SID>MoveSelectionUp(v:count1)<CR>
 xmap ]e :<C-U>call <SID>MoveSelectionDown(v:count1)<CR>
