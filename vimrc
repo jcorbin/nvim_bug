@@ -28,15 +28,7 @@ function! s:MoveSelectionDown(count) abort
   call s:ExecMove("'<,'>move'>+".a:count)
 endfunction
 
-nnoremap <silent> <Plug>unimpairedMoveUp            :<C-U>call <SID>Move('--',v:count1,'Up')<CR>
-nnoremap <silent> <Plug>unimpairedMoveDown          :<C-U>call <SID>Move('+',v:count1,'Down')<CR>
-noremap  <silent> <Plug>unimpairedMoveSelectionUp   :<C-U>call <SID>MoveSelectionUp(v:count1)<CR>
-noremap  <silent> <Plug>unimpairedMoveSelectionDown :<C-U>call <SID>MoveSelectionDown(v:count1)<CR>
-
-nmap [e <Plug>unimpairedMoveUp
-nmap ]e <Plug>unimpairedMoveDown
-xmap [e <Plug>unimpairedMoveSelectionUp
-xmap ]e <Plug>unimpairedMoveSelectionDown
-
-
-" vim:set foldmethod=marker foldlevel=0 ts=2 sw=2 expandtab:
+nmap [e :<C-U>call <SID>Move('--',v:count1,'Up')<CR>
+nmap ]e :<C-U>call <SID>Move('+',v:count1,'Down')<CR>
+xmap [e :<C-U>call <SID>MoveSelectionUp(v:count1)<CR>
+xmap ]e :<C-U>call <SID>MoveSelectionDown(v:count1)<CR>
