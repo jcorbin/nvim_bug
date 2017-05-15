@@ -1,4 +1,4 @@
-// run the following in normal mode: 5ggJjVj]e]ece
+// run the following in normal mode: 5ggJjVj]ece
 package main
 
 func foo() error {
