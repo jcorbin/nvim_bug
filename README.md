@@ -1,4 +1,4 @@
-# To Reproduce
+# To Reproduce (as of `v0.2.0-151-gedfe0980`)
 
 ```shell
 $ nvim -u vimrc 0.go
