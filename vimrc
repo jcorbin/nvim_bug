@@ -4,16 +4,9 @@ set virtualedit=all
 set tabstop=4
 
 function! s:ExecMove(cmd) abort
-  let old_fdm = &foldmethod
-  if old_fdm != 'manual'
-    let &foldmethod = 'manual'
-  endif
   normal! m`
   silent! exe a:cmd
   norm! ``
-  if old_fdm != 'manual'
-    let &foldmethod = old_fdm
-  endif
 endfunction
 
 function! s:Move(cmd, count, map) abort
